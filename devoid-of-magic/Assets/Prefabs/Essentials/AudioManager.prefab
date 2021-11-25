@@ -1,0 +1,335 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5987418497784296343
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5987418497784296337}
+  - component: {fileID: 5987418497784296342}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: AM
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5987418497784296337
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5987418497784296343}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5987418497784296342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5987418497784296343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 028d796ab26e3b8489e752eff453e4ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mixerGroup: {fileID: 24300002, guid: d5569bd5bd89da7418aca7941db1cd86, type: 2}
+  sounds:
+  - name: Bow
+    clip: {fileID: 8300000, guid: 7318dfbd0dd0737479327e126f2cda90, type: 3}
+    pitch: 1
+    loop: 0
+    randomPitch: 0
+    source: {fileID: 0}
+  - name: ArrowHit
+    clip: {fileID: 8300000, guid: b08fb2da27289e54f820547efb2750fd, type: 3}
+    pitch: 1
+    loop: 0
+    randomPitch: 0
+    source: {fileID: 0}
+  - name: Axe1
+    clip: {fileID: 8300000, guid: 2c7197f9fa9a2914dadd772b5f80e568, type: 3}
+    pitch: 1
+    loop: 0
+    randomPitch: 0
+    source: {fileID: 0}
+  - name: Axe2
+    clip: {fileID: 8300000, guid: 3a254e95316001a469ef0fe0a3f75c72, type: 3}
+    pitch: 1
+    loop: 0
+    randomPitch: 0
+    source: {fileID: 0}
+  - name: Axe3
+    clip: {fileID: 8300000, guid: eb92acae1c6a3094d905a59a2847142c, type: 3}
+    pitch: 1
+    loop: 0
+    randomPitch: 0
+    source: {fileID: 0}
+  - name: DeathUI
+    clip: {fileID: 8300000, guid: e4726d7d41093894cad77573284fdd4e, type: 3}
+    pitch: 1
+    loop: 1
+    randomPitch: 0
+    source: {fileID: 0}
+  - name: Hit
+    clip: {fileID: 8300000, guid: 0537e533f6f6a3840baccfc9fb6f29a2, type: 3}
+    pitch: 1
+    loop: 1
+    randomPitch: 0
+    source: {fileID: 0}
+  - name: Click
+    clip: {fileID: 8300000, guid: ad3e2e9b68dabfb43a2e1ca478348d3e, type: 3}
+    pitch: 1
+    loop: 0
+    randomPitch: 0
+    source: {fileID: 0}
+  - name: Portal
+    clip: {fileID: 8300000, guid: 831220c5266c69648837b4870c47c0b3, type: 3}
+    pitch: 1
+    loop: 0
+    randomPitch: 0
+    source: {fileID: 0}
+  - name: SpiderBite
+    clip: {fileID: 8300000, guid: b572b5e7cf1b18844a2651d048c6deed, type: 3}
+    pitch: 1
+    loop: 0
+    randomPitch: 0
+    source: {fileID: 0}
+  - name: SpiderDeath
+    clip: {fileID: 8300000, guid: efb0e748c2fd9d8479541502ef824074, type: 3}
+    pitch: 1
+    loop: 0
+    randomPitch: 0
+    source: {fileID: 0}
+  - name: Sword
+    clip: {fileID: 8300000, guid: 1aef37111678ff34a96dd11324616f6c, type: 3}
+    pitch: 1
+    loop: 0
+    randomPitch: 0
+    source: {fileID: 0}
+  - name: Upgrade
+    clip: {fileID: 8300000, guid: 853c3eae926b4c2479c87a333e0ac48b, type: 3}
+    pitch: 1
+    loop: 0
+    randomPitch: 0
+    source: {fileID: 0}
+  - name: 1
+    clip: {fileID: 8300000, guid: 1b29dd8b1c260be439854081637c1024, type: 3}
+    pitch: 1
+    loop: 0
+    randomPitch: 0
+    source: {fileID: 0}
+  - name: 2
+    clip: {fileID: 8300000, guid: eb4f04dae723cb347ac5fef22b41dd5c, type: 3}
+    pitch: 1
+    loop: 0
+    randomPitch: 0
+    source: {fileID: 0}
+  - name: 3
+    clip: {fileID: 8300000, guid: 54ed1bc81ad6c49468cebca02b7ee0ba, type: 3}
+    pitch: 1
+    loop: 0
+    randomPitch: 0
+    source: {fileID: 0}
+  - name: 4
+    clip: {fileID: 8300000, guid: 5fe3523fc4dff2445a5c11b80c057a7c, type: 3}
+    pitch: 1
+    loop: 0
+    randomPitch: 0
+    source: {fileID: 0}
+  - name: 5
+    clip: {fileID: 8300000, guid: 978003f3f1451f1428f4e73c4aafca5a, type: 3}
+    pitch: 1
+    loop: 0
+    randomPitch: 0
+    source: {fileID: 0}
+  - name: 6
+    clip: {fileID: 8300000, guid: 46d451dd60d65ce40921533925630837, type: 3}
+    pitch: 1
+    loop: 0
+    randomPitch: 0
+    source: {fileID: 0}
+  - name: 7
+    clip: {fileID: 8300000, guid: ec9c6bf85a2169b488dba12a2075c45f, type: 3}
+    pitch: 1
+    loop: 0
+    randomPitch: 0
+    source: {fileID: 0}
+  - name: 8
+    clip: {fileID: 8300000, guid: e9ddc6592ac97d9439e44fb11d19993c, type: 3}
+    pitch: 1
+    loop: 0
+    randomPitch: 0
+    source: {fileID: 0}
+  - name: 9
+    clip: {fileID: 8300000, guid: e252b1d9ac1116d43bf4b7ba49899eae, type: 3}
+    pitch: 1
+    loop: 0
+    randomPitch: 0
+    source: {fileID: 0}
+  - name: 10
+    clip: {fileID: 8300000, guid: f02595e13138a3c40aaf2241760b297e, type: 3}
+    pitch: 1
+    loop: 0
+    randomPitch: 0
+    source: {fileID: 0}
+  - name: 11
+    clip: {fileID: 8300000, guid: 2d0d1fb05abd1704c995e850fc45aac1, type: 3}
+    pitch: 1
+    loop: 0
+    randomPitch: 0
+    source: {fileID: 0}
+  - name: 12
+    clip: {fileID: 8300000, guid: f6c7924f0a54a8347b48b18ff022b047, type: 3}
+    pitch: 1
+    loop: 0
+    randomPitch: 0
+    source: {fileID: 0}
+  - name: 13
+    clip: {fileID: 8300000, guid: 1112910821d28104cbb224a95ac3d235, type: 3}
+    pitch: 1
+    loop: 0
+    randomPitch: 0
+    source: {fileID: 0}
+  - name: 14
+    clip: {fileID: 8300000, guid: c3d6d02402eae2346b2f07aac36e7965, type: 3}
+    pitch: 1
+    loop: 0
+    randomPitch: 0
+    source: {fileID: 0}
+  - name: 15
+    clip: {fileID: 8300000, guid: 9ee76b727230e0b40825668df6eca305, type: 3}
+    pitch: 1
+    loop: 0
+    randomPitch: 0
+    source: {fileID: 0}
+  - name: 16
+    clip: {fileID: 8300000, guid: 4282d8533218aff459363bb9c8341fc0, type: 3}
+    pitch: 1
+    loop: 0
+    randomPitch: 0
+    source: {fileID: 0}
+  - name: 17
+    clip: {fileID: 8300000, guid: f144fb18879b7324bb09d22f35edbf78, type: 3}
+    pitch: 1
+    loop: 0
+    randomPitch: 0
+    source: {fileID: 0}
+  - name: 18
+    clip: {fileID: 8300000, guid: d2da29884a9657b4dab0ab365228a1f1, type: 3}
+    pitch: 1
+    loop: 0
+    randomPitch: 0
+    source: {fileID: 0}
+  - name: 19
+    clip: {fileID: 8300000, guid: 38a9fc9d5dde01b43bc2c6090d2bf98c, type: 3}
+    pitch: 1
+    loop: 0
+    randomPitch: 0
+    source: {fileID: 0}
+  - name: Gun
+    clip: {fileID: 8300000, guid: 07a171dc56d102e4c91e069b59513612, type: 3}
+    pitch: 1
+    loop: 0
+    randomPitch: 1
+    source: {fileID: 0}
+  - name: Pilos
+    clip: {fileID: 8300000, guid: e0d8af417b7d646498a187d82ad4ea08, type: 3}
+    pitch: 1
+    loop: 0
+    randomPitch: 1
+    source: {fileID: 0}
+  - name: 20
+    clip: {fileID: 8300000, guid: 2ab8f163b4aaca84a9491d018a9a7870, type: 3}
+    pitch: 1
+    loop: 0
+    randomPitch: 0
+    source: {fileID: 0}
+  - name: 21
+    clip: {fileID: 8300000, guid: 2eec2f03d19f4e9489cca35efc949d46, type: 3}
+    pitch: 1
+    loop: 0
+    randomPitch: 0
+    source: {fileID: 0}
+  - name: 22
+    clip: {fileID: 8300000, guid: f9728ba8bfb879144a49da2bbd047e85, type: 3}
+    pitch: 1
+    loop: 0
+    randomPitch: 0
+    source: {fileID: 0}
+  - name: 23
+    clip: {fileID: 8300000, guid: 43746fd642cce21438125a7ae2a46177, type: 3}
+    pitch: 1
+    loop: 0
+    randomPitch: 0
+    source: {fileID: 0}
+  - name: 24
+    clip: {fileID: 8300000, guid: 998dd000f70a1a945afe63f696f991bd, type: 3}
+    pitch: 1
+    loop: 0
+    randomPitch: 0
+    source: {fileID: 0}
+  - name: 25
+    clip: {fileID: 8300000, guid: 83318328bc5af86478d581e1ce6b2d74, type: 3}
+    pitch: 1
+    loop: 0
+    randomPitch: 0
+    source: {fileID: 0}
+  - name: 26
+    clip: {fileID: 8300000, guid: c2f8674ebf04cf54193d75b2400f30d6, type: 3}
+    pitch: 1
+    loop: 0
+    randomPitch: 0
+    source: {fileID: 0}
+  - name: 27
+    clip: {fileID: 8300000, guid: 690396eea9661584eb778cda8d9794ae, type: 3}
+    pitch: 1
+    loop: 0
+    randomPitch: 0
+    source: {fileID: 0}
+  - name: DemonDie
+    clip: {fileID: 8300000, guid: 5fe3523fc4dff2445a5c11b80c057a7c, type: 3}
+    pitch: 1.5
+    loop: 0
+    randomPitch: 0
+    source: {fileID: 0}
+  - name: Laser
+    clip: {fileID: 8300000, guid: da1c61f321affb24187d7f9348835570, type: 3}
+    pitch: 1
+    loop: 0
+    randomPitch: 0
+    source: {fileID: 0}
+  - name: Jump1
+    clip: {fileID: 8300000, guid: 70e0ed39e6b2e2e4bbc55d6f94da333a, type: 3}
+    pitch: 1
+    loop: 0
+    randomPitch: 0
+    source: {fileID: 0}
+  - name: Jump2
+    clip: {fileID: 8300000, guid: 0fd7488fea20d9443adefb99a40b35cf, type: 3}
+    pitch: 1
+    loop: 0
+    randomPitch: 0
+    source: {fileID: 0}
+  - name: Riser
+    clip: {fileID: 8300000, guid: 0d30e00f51c6c91429820ddbb99bf9c0, type: 3}
+    pitch: 1
+    loop: 0
+    randomPitch: 0
+    source: {fileID: 0}
+  - name: Coin
+    clip: {fileID: 8300000, guid: 0dd9d2f05694cfa4c919b737f5920357, type: 3}
+    pitch: 1
+    loop: 0
+    randomPitch: 0
+    source: {fileID: 0}

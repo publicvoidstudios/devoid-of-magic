@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Weapon
+  - Enemy
+  - Trader
+  - Borders
+  - Destructor
+  - Counter
+  - Trainer
+  - Questor
+  - GD
+  - Drop
+  - LvlLoader
+  - GameOver
+  - EnemyLaser
+  - DayTime
+  - Mimic
+  - Blocker
+  - AM
+  - OverPanel
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Ground
+  - Background
+  - Foreground
+  - Earth
+  - NPC
+  - Player
+  - Enemy
+  - Projectile
+  - Drop
+  - Speech
+  - Mimic
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Background
+    uniqueID: 690834953
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: UI
+    uniqueID: 894593683
+    locked: 0
+  - name: Player
+    uniqueID: 4287240377
+    locked: 0
