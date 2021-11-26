@@ -157,7 +157,7 @@ public class DemonBoss : MonoBehaviour
     }
     public void DamagePlayer()
     {
-        playerScript.DamageRecount(damage);
+        playerScript.DamageRecount(damage + Random.Range(-2, 3));
     }
 
     IEnumerator HealCooldown()
@@ -183,7 +183,7 @@ public class DemonBoss : MonoBehaviour
     }
     public void Drink()
     {
-        enemyScript.hp += healingPower;
+        enemyScript.hp += healingPower + Random.Range(-20, 30);
         healCooldown = false;
         healing = false;
     }

@@ -15,6 +15,8 @@ public class Spikes : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             player.isDead = true;
+            player.currentArmor = 0;
+            player.currentHealth = 0;
             player.Die();
         }
     }

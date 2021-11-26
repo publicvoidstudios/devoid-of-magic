@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -117,7 +116,7 @@ public class Enemy_Melee : MonoBehaviour
     }
     public void DamagePlayer()
     {
-        playerScript.DamageRecount(damage);
+        playerScript.DamageRecount(damage + Random.Range(-2, 3));
     }
     void Attack()
     {

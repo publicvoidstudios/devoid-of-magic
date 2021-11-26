@@ -155,7 +155,7 @@ public class Ursa : MonoBehaviour
     }
     public void DamagePlayer()
     {
-        playerScript.DamageRecount(damage);
+        playerScript.DamageRecount(damage + Random.Range(-2, 3));
     }
     private void MakeAShot()
     {

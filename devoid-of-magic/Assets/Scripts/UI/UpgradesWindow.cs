@@ -78,9 +78,9 @@ public class UpgradesWindow : MonoBehaviour
             abilityLevelText.text = playerScript.bowLevel.ToString();
             totalPrice = basicPrice * playerScript.bowLevel;
             goldPriceText.text = totalPrice.ToString();
-            current = combatScript.damageRanged + (playerScript.bowLevel * 3);
+            current = combatScript.damageRanged + (playerScript.bowLevel * 2);
             currentStatsText.text = current.ToString();
-            next = current + 3;
+            next = current + 2;
             nextStatsText.text = next.ToString();
         }        
         if (absw.currentAbility == 3)

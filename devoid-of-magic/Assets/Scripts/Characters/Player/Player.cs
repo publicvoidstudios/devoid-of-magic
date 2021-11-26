@@ -104,7 +104,7 @@ public class Player : MonoBehaviour
             currentArmor = maxArmor;
         }
         maxHealth = 100 + (strengthLevel * 6); //Set max HP if it was changed (Ex. if skill upgraded)
-        maxArmor = 100 + (armorLevel * 4); //same for armor
+        maxArmor = 50 + (armorLevel * 4); //same for armor
         enemies = GameObject.FindGameObjectsWithTag("Enemy"); //Keep enemies array filled and updated
         if (Input.GetKeyDown(KeyCode.P)) //Testing func.
         {

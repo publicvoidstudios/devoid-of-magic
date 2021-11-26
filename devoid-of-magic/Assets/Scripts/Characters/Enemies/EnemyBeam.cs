@@ -22,14 +22,13 @@ public class EnemyBeam : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            Debug.Log(collision.name + "damaged");
             if(enemy != null)
             {
-                player.DamageRecount(enemy.laserDamage);
+                player.DamageRecount(enemy.laserDamage + Random.Range(-2, 3));
             }
             if (boss != null)
             {
-                player.DamageRecount(boss.laserDamage);
+                player.DamageRecount(boss.laserDamage + Random.Range(-2, 3));
             }            
             return;
         }

@@ -29,7 +29,9 @@ public class Gold : MonoBehaviour
     {
         if (Mathf.Abs(transform.position.x - player.position.x) < collectDistance)
         {
-            transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
+            Vector2 target = player.position;
+            target.y += 1f;
+            transform.position = Vector2.MoveTowards(transform.position, target, speed * Time.deltaTime);
         }
     }
 

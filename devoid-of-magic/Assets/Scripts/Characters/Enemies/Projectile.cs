@@ -43,7 +43,7 @@ public class Projectile : MonoBehaviour
     {
         if (other.CompareTag("Player") && !target.isDead)
         {
-            target.DamageRecount(damage);
+            target.DamageRecount(damage + Random.Range(-2, 3));
             Destroy(gameObject);
         }
     }

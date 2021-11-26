@@ -24,7 +24,7 @@ public class Enemy : MonoBehaviour
         alive = true;
         anim = GetComponent<Animator>();
         Player player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
-        hp += player.progress * 3;
+        hp += player.progress * 10;
         maxhp = hp;
         slider.gameObject.SetActive(false);
         SetHPValue(hp, maxhp);

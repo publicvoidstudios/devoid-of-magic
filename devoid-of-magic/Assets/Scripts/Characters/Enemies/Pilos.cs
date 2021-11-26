@@ -65,8 +65,7 @@ public class Pilos : MonoBehaviour
         {
             AudioManager audio = GameObject.FindGameObjectWithTag("AM").GetComponent<AudioManager>();
             audio.Play("ArrowHit");
-            Debug.Log(gameObject.name + "meet Player");
-            target.DamageRecount(damage);
+            target.DamageRecount(damage + Random.Range(-2, 3));
             Destroy(gameObject);
         }
     }
