@@ -21,7 +21,7 @@ public class ADRewardStartingLocation : MonoBehaviour
     {
             string adUnitId;
         #if UNITY_ANDROID
-            adUnitId = "ca-app-pub-3940256099942544/5224354917";
+            adUnitId = "ca-app-pub-9536718512266906/7690133275";
         #elif UNITY_IPHONE
             adUnitId = "ca-app-pub-3940256099942544/1712485313";
         #else

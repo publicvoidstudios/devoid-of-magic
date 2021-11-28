@@ -202,7 +202,7 @@ public class Pirate_Boss : MonoBehaviour
     }
     public void Drink()
     {
-        enemyScript.hp += healingPower;
+        enemyScript.hp += healingPower + Random.Range(-20, 30);
         healCooldown = false;
         healing = false;
     }
