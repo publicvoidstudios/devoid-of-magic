@@ -6,8 +6,6 @@ public class ADBanner : MonoBehaviour
     private BannerView bannerView;
     public void Start()
     {
-        // Initialize the Google Mobile Ads SDK.
-        MobileAds.Initialize(initStatus => { });
         //Request Banner
         RequestBanner();
     }
@@ -15,7 +13,7 @@ public class ADBanner : MonoBehaviour
     private void RequestBanner()
     {
         #if UNITY_ANDROID
-            string adUnitId = "ca-app-pub-9536718512266906/4357392925";
+            string adUnitId = "ca-app-pub-5678296141046279/3304600470";
         #elif UNITY_IPHONE
             string adUnitId = "ca-app-pub-3940256099942544/2934735716";
         #else

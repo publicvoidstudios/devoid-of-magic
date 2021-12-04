@@ -41,7 +41,7 @@ public class Player : MonoBehaviour
     public Armor armorBar; //Armor script
     public Joystick joystick; //Reference to main movement controller
     private Rigidbody2D rb; //Rigidbody2D
-    private Animator anim; //Animator
+    public Animator anim; //Animator
     [HideInInspector]
     public bool activeQuest; //Has active quest?
     private bool jumpCooldown; //Can jump already?

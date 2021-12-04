@@ -46,6 +46,10 @@ public class Projectile : MonoBehaviour
             target.DamageRecount(damage + Random.Range(-2, 3));
             Destroy(gameObject);
         }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
 }

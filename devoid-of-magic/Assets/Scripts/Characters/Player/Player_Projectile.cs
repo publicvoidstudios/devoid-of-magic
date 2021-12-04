@@ -46,17 +46,30 @@ public class Player_Projectile : MonoBehaviour
     {
         float distance = Mathf.Infinity;
         Vector3 position = transform.position;
-        foreach(GameObject e in enemiesArr)
+        if(enemiesArr.Length > 0)
         {
-            Vector3 dif = e.transform.position - position;
-            float currDist = dif.sqrMagnitude;
-            if(currDist < distance)
+            foreach (GameObject e in enemiesArr)
             {
-                nearest = e;
-                distance = currDist;
+                Vector3 dif = e.transform.position - position;
+                float currDist = dif.sqrMagnitude;
+                if (currDist < distance)
+                {
+                    nearest = e;
+                    distance = currDist;
+                }
             }
         }
+        else
+        {
+            nearest = gameObject;
+            nearest.transform.position = new Vector3(nearest.transform.position.x + 10, nearest.transform.position.y);
+        }
         return nearest;
+    }
+
+    private void SelfDestruct()
+    {
+        Destroy(gameObject);
     }
 
     // Update is called once per frame
@@ -93,11 +106,6 @@ public class Player_Projectile : MonoBehaviour
 
 
     }
-
-    private void SelfDestruct()
-    {
-        Destroy(gameObject);
-    }
     public void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Enemy"))
@@ -123,6 +131,10 @@ public class Player_Projectile : MonoBehaviour
                     Destroy(gameObject);
                 }
             }
+        }
+        else if(!other.CompareTag("Player"))
+        {
+            Destroy(gameObject);
         }
     }
 }
