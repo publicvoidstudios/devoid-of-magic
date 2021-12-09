@@ -46,54 +46,57 @@ public class UpgradesWindow : MonoBehaviour
     {
         playerNameText.text = playerScript.player_name;
         playerGoldText.text = playerScript.gold.ToString();
-        if (absw.currentAbility == 0)
+        if(absw != null)
         {
-            abilityNameText.text = "Armor";
-            abilityDescriptionText.text = "Armor get's twice reduced damage, this can save your life!";
-            abilityLevelText.text = playerScript.armorLevel.ToString();
-            totalPrice = basicPrice * playerScript.armorLevel;
-            goldPriceText.text = totalPrice.ToString();
-            current = playerScript.maxArmor;
-            currentStatsText.text = current.ToString();
-            next = current + 4;
-            nextStatsText.text = next.ToString();
-        }
-        if (absw.currentAbility == 1)
-        {
-            abilityNameText.text = "Axe Damage";
-            abilityDescriptionText.text = "Slash you'r enemies with fearsome melee weapon";
-            abilityLevelText.text = playerScript.axeLevel.ToString();
-            totalPrice = basicPrice * playerScript.axeLevel;
-            goldPriceText.text = totalPrice.ToString();
-            current = combatScript.damageMelee + (playerScript.axeLevel * 3);
-            currentStatsText.text = current.ToString();
-            next = current + 3;
-            nextStatsText.text = next.ToString();
-            
-        }
-        if (absw.currentAbility == 2)
-        {
-            abilityNameText.text = "Bow Damage";
-            abilityDescriptionText.text = "Keep shooting, don't even let them get close to you!";
-            abilityLevelText.text = playerScript.bowLevel.ToString();
-            totalPrice = basicPrice * playerScript.bowLevel;
-            goldPriceText.text = totalPrice.ToString();
-            current = combatScript.damageRanged + (playerScript.bowLevel * 2);
-            currentStatsText.text = current.ToString();
-            next = current + 2;
-            nextStatsText.text = next.ToString();
-        }        
-        if (absw.currentAbility == 3)
-        {
-            abilityNameText.text = "Health";
-            abilityDescriptionText.text = "If your armor is broken, there is only you left";
-            abilityLevelText.text = playerScript.strengthLevel.ToString();
-            totalPrice = basicPrice * playerScript.strengthLevel;
-            goldPriceText.text = totalPrice.ToString();
-            current = playerScript.maxHealth;
-            currentStatsText.text = current.ToString();
-            next = current + 6;
-            nextStatsText.text = next.ToString();
+            if (absw.currentAbility == 0)
+            {
+                abilityNameText.text = "Armor";
+                abilityDescriptionText.text = "Armor get's twice reduced damage, this can save your life!";
+                abilityLevelText.text = playerScript.armorLevel.ToString();
+                totalPrice = basicPrice * playerScript.armorLevel;
+                goldPriceText.text = totalPrice.ToString();
+                current = playerScript.maxArmor;
+                currentStatsText.text = current.ToString();
+                next = current + 4;
+                nextStatsText.text = next.ToString();
+            }
+            if (absw.currentAbility == 1)
+            {
+                abilityNameText.text = "Axe Damage";
+                abilityDescriptionText.text = "Slash you'r enemies with fearsome melee weapon";
+                abilityLevelText.text = playerScript.axeLevel.ToString();
+                totalPrice = basicPrice * playerScript.axeLevel;
+                goldPriceText.text = totalPrice.ToString();
+                current = combatScript.damageMelee + (playerScript.axeLevel * 3);
+                currentStatsText.text = current.ToString();
+                next = current + 3;
+                nextStatsText.text = next.ToString();
+
+            }
+            if (absw.currentAbility == 2)
+            {
+                abilityNameText.text = "Bow Damage";
+                abilityDescriptionText.text = "Keep shooting, don't even let them get close to you!";
+                abilityLevelText.text = playerScript.bowLevel.ToString();
+                totalPrice = basicPrice * playerScript.bowLevel;
+                goldPriceText.text = totalPrice.ToString();
+                current = combatScript.damageRanged + (playerScript.bowLevel * 3);
+                currentStatsText.text = current.ToString();
+                next = current + 3;
+                nextStatsText.text = next.ToString();
+            }
+            if (absw.currentAbility == 3)
+            {
+                abilityNameText.text = "Health";
+                abilityDescriptionText.text = "If your armor is broken, there is only you left";
+                abilityLevelText.text = playerScript.strengthLevel.ToString();
+                totalPrice = basicPrice * playerScript.strengthLevel;
+                goldPriceText.text = totalPrice.ToString();
+                current = playerScript.maxHealth;
+                currentStatsText.text = current.ToString();
+                next = current + 6;
+                nextStatsText.text = next.ToString();
+            }
         }
     }
 

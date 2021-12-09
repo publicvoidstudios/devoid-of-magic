@@ -37,11 +37,18 @@ public class Chest : MonoBehaviour
         StartCoroutine(Randomizer());
         enemyScr.enabled = false;
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        Invoke("SetState", 2f);
     }
     private States State
     {
         get { return (States)animator.GetInteger("State"); }
         set { animator.SetInteger("State", (int)value); }
+    }
+
+    private void SetState()
+    {
+        rb.bodyType = RigidbodyType2D.Static;
+        ccd.enabled = false;
     }
 
     // Update is called once per frame
@@ -50,6 +57,8 @@ public class Chest : MonoBehaviour
         meleeAttackDistance = transform.position.x - player.position.x;
         if (isMimic)
         {
+            ccd.enabled = true;
+            rb.bodyType = RigidbodyType2D.Dynamic;            
             enemyScr.enabled = true;
             if (enemyScr.alive)
             {

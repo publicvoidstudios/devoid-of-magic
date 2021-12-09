@@ -235,6 +235,7 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   armorBar: {fileID: 0}
   joystick: {fileID: 0}
+  anim: {fileID: 0}
   activeQuest: 0
   arrow: {fileID: 3510134444047068661, guid: a3c8cba556dc3244faac9db6ebd17eac, type: 3}
   arrowSpawnPoint: {fileID: 2085874580}
@@ -281,7 +282,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 69632
   damageMelee: 10
-  damageRanged: 2
+  damageRanged: 3
   enemyScript: {fileID: 0}
   arrow: {fileID: 3510134444047068661, guid: a3c8cba556dc3244faac9db6ebd17eac, type: 3}
   arrowSpawnPoint: {fileID: 2085874580}

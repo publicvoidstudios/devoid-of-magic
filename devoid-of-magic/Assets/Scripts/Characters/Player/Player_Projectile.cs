@@ -99,7 +99,7 @@ public class Player_Projectile : MonoBehaviour
             transform.position = Vector2.MoveTowards(transform.position, nearest.transform.position, speed * Time.deltaTime);
         }
 
-        if (distTravelled > playerScript.range || nearest == null)
+        if (distTravelled > playerScript.range - 1 || nearest == null)
         {
             Destroy(gameObject);
         }

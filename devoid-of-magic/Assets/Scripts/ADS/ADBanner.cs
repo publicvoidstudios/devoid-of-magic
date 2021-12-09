@@ -23,15 +23,6 @@ public class ADBanner : MonoBehaviour
         // Create a 320x50 banner at the top of the screen.
         bannerView = new BannerView(adUnitId, AdSize.SmartBanner, AdPosition.Top);
 
-
-        // Called when an ad request has successfully loaded.
-        bannerView.OnAdLoaded += HandleOnAdLoaded;
-        // Called when an ad is clicked.
-        bannerView.OnAdOpening += HandleOnAdOpened;
-        // Called when the user returned from the app after an ad click.
-        bannerView.OnAdClosed += HandleOnAdClosed;
-
-
         // Create an empty ad request.
         AdRequest request = new AdRequest.Builder().Build();
 
@@ -49,20 +40,5 @@ public class ADBanner : MonoBehaviour
     {
         bannerView.Hide();
         Debug.Log("bannerView.Hide(); called");
-    }
-
-    public void HandleOnAdLoaded(object sender, EventArgs args)
-    {
-        print("HandleAdLoaded event received");
-    }
-
-    public void HandleOnAdOpened(object sender, EventArgs args)
-    {
-        print("HandleAdOpened event received");
-    }
-
-    public void HandleOnAdClosed(object sender, EventArgs args)
-    {
-        print("HandleAdClosed event received");
     }
 }

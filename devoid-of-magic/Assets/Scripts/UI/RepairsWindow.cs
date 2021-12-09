@@ -21,7 +21,9 @@ public class RepairsWindow : MonoBehaviour
     [SerializeField]
     Slider countdownSlider;
     [SerializeField]
-    Button[] buttons;
+    Button repairButton;
+    [SerializeField]
+    Button toolsButton;
     [SerializeField]
     GameObject player;
     Player playerScript;
@@ -60,7 +62,7 @@ public class RepairsWindow : MonoBehaviour
             minutes = Mathf.FloorToInt(countdowntime / 60);
             seconds = countdowntime - (minutes * 60);
             countdownSlider.value = defaultTime - countdowntime;
-            countdownText.text = string.Format("{0:00}:{1:00}", minutes, seconds);            
+            countdownText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
         }
         if (countdowntime <= 0)
         {
@@ -71,17 +73,8 @@ public class RepairsWindow : MonoBehaviour
         }
         if(playerScript.currentArmor == playerScript.maxArmor)
         {
-            foreach (Button x in buttons)
-            {
-                x.interactable = false;
-            }
-        }
-        else
-        {
-            foreach (Button x in buttons)
-            {
-                x.interactable = true;
-            }
+            toolsButton.interactable = false;
+            repairButton.interactable = false;
         }
     }
     public void CanvasEnabled(bool enabled)
@@ -99,7 +92,7 @@ public class RepairsWindow : MonoBehaviour
                 countdownSlider.maxValue = countdowntime;
                 playerScript.gold -= goldprice;
                 countdownStarted = true;
-                buttons[0].interactable = false;
+                repairButton.interactable = false;
                 // Set button to inactive state
 
             }

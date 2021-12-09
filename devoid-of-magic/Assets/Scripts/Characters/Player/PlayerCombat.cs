@@ -160,7 +160,7 @@ public class PlayerCombat : MonoBehaviour
     public void InstantiateArrow() //Is called as an Event in animation
     {
         //Set arrow damage
-        projectile.projectile_damage = damageRanged + (playerScript.bowLevel * 2) + Random.Range(-playerScript.bowLevel, playerScript.bowLevel);
+        projectile.projectile_damage = damageRanged + (playerScript.bowLevel * 3) + Random.Range(-playerScript.bowLevel, playerScript.bowLevel);
         //Instantiates an arrow from Prefab
         Instantiate(arrow, arrowSpawnPoint.position, Quaternion.AngleAxis(projectile.angle, Vector3.right));
     }

@@ -11,9 +11,7 @@ public class LevelLoader : MonoBehaviour
     public Slider slider;
     public TMP_Text percentage;
     public TMP_Text interactive;
-    public Button continueButton;
-    bool activationAllowed;
-   public void LoadLevel(int buildIndex)
+    public void LoadLevel(int buildIndex)
     {
         Time.timeScale = 1f;
         AudioManager audio = GameObject.FindGameObjectWithTag("AM").GetComponent<AudioManager>();
@@ -21,7 +19,7 @@ public class LevelLoader : MonoBehaviour
         if (pauseMenu != null)
         {
             pauseMenu.SetActive(false);
-        }        
+        }
         StartCoroutine(LoadAsyncronously(buildIndex));
     }
 
@@ -30,13 +28,12 @@ public class LevelLoader : MonoBehaviour
         AsyncOperation operation = SceneManager.LoadSceneAsync(buildIndex, LoadSceneMode.Single);
         operation.allowSceneActivation = false;
         loadingPanel.SetActive(true);
-        continueButton.interactable = false;
         while (!operation.isDone)
         {
             float progress = Mathf.Clamp01(operation.progress / .9f);
             slider.value = progress;
             percentage.text = (progress * 100f).ToString("F0") + "/100";
-            if(0 <= progress && progress > 0.1f)
+            if (0 <= progress && progress > 0.1f)
             {
                 interactive.text = "Initializing...";
             }
@@ -50,25 +47,13 @@ public class LevelLoader : MonoBehaviour
             }
             if (0.6f <= progress && progress >= 1f)
             {
-                interactive.text = "Press Continue button";
+                interactive.text = "Almost there...";
             }
             if (operation.progress >= 0.9f)
             {
-                continueButton.interactable = true;
-                if (activationAllowed)
-                    //Activate the Scene
-                    operation.allowSceneActivation = true;
+                operation.allowSceneActivation = true;
             }
             yield return null;
         }
-
-        
-    }
-
-    public void Continue()
-    {
-        AudioManager audio = GameObject.FindGameObjectWithTag("AM").GetComponent<AudioManager>();
-        audio.Play("Click");
-        activationAllowed = true;
     }
 }

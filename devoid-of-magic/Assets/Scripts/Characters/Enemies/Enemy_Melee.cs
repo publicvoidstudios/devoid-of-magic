@@ -120,7 +120,7 @@ public class Enemy_Melee : MonoBehaviour
     }
     void Attack()
     {
-        if (Mathf.Abs(meleeAttackDistance) < adjustableDistance && Mathf.Abs(verticalDistance) < 1 && !playerScript.isDead)
+        if (Mathf.Abs(meleeAttackDistance) < adjustableDistance && Mathf.Abs(verticalDistance) < 1.5f && !playerScript.isDead)
         {
             speed = 0;
             State = States.attack;
@@ -140,7 +140,7 @@ public class Enemy_Melee : MonoBehaviour
                 State = States.walk;
             }
         }
-        else if (Mathf.Abs(meleeAttackDistance) < adjustableDistance && Mathf.Abs(verticalDistance) > 1 || playerScript.isDead)
+        else if (Mathf.Abs(meleeAttackDistance) < adjustableDistance && Mathf.Abs(verticalDistance) > 1.5f || playerScript.isDead)
         {
             speed = 0;
             State = States.idle;
