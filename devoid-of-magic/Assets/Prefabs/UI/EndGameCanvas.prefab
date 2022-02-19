@@ -354,6 +354,7 @@ GameObject:
   - component: {fileID: 7191290222291248907}
   - component: {fileID: 7191290222291248910}
   - component: {fileID: 7191290222291248905}
+  - component: {fileID: 2997946491296801307}
   - component: {fileID: 7191290222291248904}
   m_Layer: 5
   m_Name: ADButton
@@ -420,6 +421,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &2997946491296801307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7191290222291248906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dc3d5027a46dcd41a984ce695f51ef3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myPlacementId: Rewarded_Android
+  reward: 1
 --- !u!114 &7191290222291248904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -463,31 +478,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7191290222291248905}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6597103303018017288}
-        m_TargetAssemblyTypeName: ADReward, Assembly-CSharp
-        m_MethodName: ShowAd
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 7191290222291248904}
-        m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
-        m_MethodName: set_interactable
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &7191290222688556680
 GameObject:
   m_ObjectHideFlags: 0
@@ -1036,7 +1027,6 @@ GameObject:
   - component: {fileID: 7191290223428541813}
   - component: {fileID: 7191290223428541812}
   - component: {fileID: 7191290223428541704}
-  - component: {fileID: 6597103303018017288}
   m_Layer: 5
   m_Name: EndGameCanvas
   m_TagString: GameOver
@@ -1139,18 +1129,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameOverPanel: {fileID: 7191290223550448236}
   youEarned: {fileID: 7191290222750318698}
---- !u!114 &6597103303018017288
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7191290223428541815}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 064ea2f9e4aca3a488a46a28e1f5d9d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7191290223550448236
 GameObject:
   m_ObjectHideFlags: 0

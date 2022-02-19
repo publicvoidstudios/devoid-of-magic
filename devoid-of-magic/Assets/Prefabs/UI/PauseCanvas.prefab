@@ -1262,7 +1262,7 @@ GameObject:
   - component: {fileID: 1591964881101093312}
   - component: {fileID: 1591964881101094463}
   - component: {fileID: 1591964881101093314}
-  - component: {fileID: 6104753950427623857}
+  - component: {fileID: 6662590157220443656}
   m_Layer: 5
   m_Name: PauseMenu
   m_TagString: Untagged
@@ -1351,7 +1351,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &6104753950427623857
+--- !u!114 &6662590157220443656
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1360,9 +1360,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1591964881101094462}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a25af24e4ef87974c9f097e6df2d70fd, type: 3}
+  m_Script: {fileID: 11500000, guid: 415d76ce20c40ed4eac6880606d5cace, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameId: 4619273
+  placementId: Banner_Android
+  testMode: 0
 --- !u!1 &3318611037860652402
 GameObject:
   m_ObjectHideFlags: 0
