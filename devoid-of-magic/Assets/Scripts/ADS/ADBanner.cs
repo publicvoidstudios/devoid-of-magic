@@ -32,6 +32,7 @@ public class ADBanner : MonoBehaviour
 
     private void OnEnable()
     {
+        RequestBanner();
         bannerView.Show();
         Debug.Log("bannerView.Show(); called");
     }

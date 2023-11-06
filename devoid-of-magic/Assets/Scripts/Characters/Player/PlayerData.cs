@@ -17,6 +17,7 @@ public class PlayerData
     public int tools;
     public int currentArmor;
     public int magicDamage;
+    public bool tutorial_complete;
 
     public PlayerData(Player player)
     {
@@ -32,5 +33,6 @@ public class PlayerData
         tools = player.tools;
         currentArmor = player.currentArmor;
         magicDamage = player.magicDamage;
+        tutorial_complete = player.tutorial_complete;
     }
 }

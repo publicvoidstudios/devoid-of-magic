@@ -20,13 +20,14 @@ public class Tutorial : MonoBehaviour
         if (currentTut > tuts.Length)
         {
             panel.SetActive(false);
+            player.tutorial_complete = true;
         }
     }
 
     IEnumerator ActivatePanel()
     {
         yield return new WaitForSeconds(0.5f);
-        if (player.level == 0)
+        if (player.level == 0 && !player.tutorial_complete)
         {
             panel.SetActive(true);
             tuts[0].SetActive(true);
@@ -45,6 +46,6 @@ public class Tutorial : MonoBehaviour
         {
             tut.SetActive(false);
         }        
-        tuts[currentTut].SetActive(true);        
+        tuts[currentTut-1].SetActive(true); 
     }
 }

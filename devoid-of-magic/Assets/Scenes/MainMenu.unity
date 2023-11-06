@@ -3130,7 +3130,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &912112164
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4799,6 +4799,7 @@ MonoBehaviour:
   player_name: 
   tools: 0
   magicDamage: 0
+  tutorial_complete: 0
   respawned: 0
   speed: 0
   maxHealth: 0

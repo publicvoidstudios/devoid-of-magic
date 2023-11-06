@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
     public string player_name; //Player nickname 
     public int tools; //Player tools for instant repairs
     public int magicDamage; //Level of MAGIC skill
+    public bool tutorial_complete;
     //End of retrievable attributes
     [HideInInspector]
     public bool respawned; //Has a Player already used ADs to ressurrect? 
@@ -83,18 +84,27 @@ public class Player : MonoBehaviour
     
     private void Update()
     {
-        attacking = anim.GetBool("Attacking"); //Detect's if Player is attacking by getting this info from animator
+        if (anim != null)
+        {
+            attacking = anim.GetBool("Attacking"); //Detect's if Player is attacking by getting this info from animator
+        }
         if (isGrounded) //When is grounded refreshes jump counter to default value
         {
             jumpCount = jumpCountE;
         }
-        anim.SetBool("InAir", !isGrounded); //Set bool in animator accordingly to Player's state
-        anim.SetBool("DoubleJump", jumpCount < jumpCountE); //Detection if Player is jumping more than 1 time in a row        
-        anim.SetBool("Dead", isDead); //Connection between script and animator, detecting if Player is alive or dead
-        healthBar.SetMaxAmount(maxHealth); //max health always equals value that depends on Player's skill level
-        armorBar.SetMaxAmount(maxArmor); //Same for armor
-        healthBar.SetAmount(currentHealth); //Set current HP to slider in GUI
-        armorBar.SetAmount(currentArmor); //Same for Armor
+        if (anim != null)
+        {
+            anim.SetBool("InAir", !isGrounded); //Set bool in animator accordingly to Player's state
+            anim.SetBool("DoubleJump", jumpCount < jumpCountE); //Detection if Player is jumping more than 1 time in a row        
+            anim.SetBool("Dead", isDead); //Connection between script and animator, detecting if Player is alive or dead
+        }
+        if(healthBar != null && armorBar != null)
+        {
+            healthBar.SetMaxAmount(maxHealth); //max health always equals value that depends on Player's skill level
+            armorBar.SetMaxAmount(maxArmor); //Same for armor
+            healthBar.SetAmount(currentHealth); //Set current HP to slider in GUI
+            armorBar.SetAmount(currentArmor); //Same for Armor
+        }        
         if(currentHealth > maxHealth) //Current HP can't be more than max
         {
             currentHealth = maxHealth;
@@ -115,7 +125,7 @@ public class Player : MonoBehaviour
             Save();
             Debug.Log("Progress Saved");
         }
-        if (currentHealth > 0) //If Player is alive
+        if (currentHealth > 0 && joystick != null) //If Player is alive
         {
             if (Input.GetButton("Horizontal") || joystick.Horizontal != 0) //Horizontal movement
             {
@@ -276,7 +286,10 @@ public class Player : MonoBehaviour
     }
     private void CheckGround()
     {
-        isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround); //Draw a circle around feetPos GO, and detect if objects of ground layer mask are in range.
+        if (feetPos != null)
+        {
+            isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround); //Draw a circle around feetPos GO, and detect if objects of ground layer mask are in range.
+        }        
     }
     public void GetDamage(int damage) //Makes Player mortal. Get damage to armor
     {
@@ -335,6 +348,7 @@ public class Player : MonoBehaviour
         tools = data.tools;
         currentArmor = data.currentArmor;
         magicDamage = data.magicDamage;
+        tutorial_complete = data.tutorial_complete;
     }
 
 }

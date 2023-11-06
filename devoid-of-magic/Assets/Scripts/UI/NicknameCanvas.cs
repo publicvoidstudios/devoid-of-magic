@@ -11,7 +11,7 @@ public class NicknameCanvas : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (player.level == 0 && player.progress == 0)
+        if (player.level == 0 && player.progress == 0 && player.player_name == "")
         {
             panel.SetActive(true);
         }
